@@ -67,6 +67,15 @@ img{
     margin: 0 auto;
 }
 
+/* LINE */
+.line{
+    background-color: var(--verde);
+    height: 10px;
+    width: 50px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+}
+
 /*Menu-Barra*/
 .menu{
     position: fixed;
@@ -151,7 +160,12 @@ main{
 
 .main-tittle h1{
     font-size: 4rem;
-    font-family: var(--font-general);
+    font-family: var(--header-font);
+    line-height: 3.8rem;
+}
+
+.main-tittle .span-verde{
+    font-family: var(--header-font);
 }
 
 .main-tittle .text-principal{
@@ -502,7 +516,11 @@ main{
     color: var(--principal);
 }
 
-.lugares-content span{
+.span-verde{
+    color: var(--verde);
+}
+
+/* .lugares-content span{
     font-family: var(--font-general);
     font-size: 3rem;
     background: rgb(100,43,255);
@@ -512,47 +530,7 @@ main{
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     padding: 7px;
-}
-
-.lugares-content p{
-    padding: 20px 100px 0 100px;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-}
-
-.consultas-content{
-    position: relative;
-}
-
-.consultas-content h2{
-    padding: 0 110px 0 110px;
-    font-size: 2rem;
-}
-
-.consultas-content p{
-    padding: 0 110px 0 110px;
-    font-size: 1rem;
-    text-transform: uppercase;
-}
-
-.consultas-content .p-2{
-    padding-bottom: 8px;
-}
-
-.consultas-content a{
-    background-color: var(--rosa);
-    border-radius: 15px;
-    padding: 10px;
-    color: white;
-    width: 200px;
-    position: absolute;
-    right: 150px;
-    transition: .3s;
-}
-
-.consultas-content a:hover{
-    background-color: var(--violeta);
-}
+} */
 
 /**DIV FOOTER - Info y redes sociales*/
 

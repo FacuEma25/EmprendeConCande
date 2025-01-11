@@ -67,12 +67,20 @@ img{
 
 /* LINE */
 .line{
-    background-color: var(--letra);
+    background-color: var(--verde);
     height: 10px;
     width: 50px;
     margin-bottom: 25px;
     border-radius: 5px;
     margin: 0 auto;
+}
+
+.line-2{
+    background-color: var(--letra2);
+    height: 10px;
+    width: 50px;
+    margin-bottom: 25px;
+    border-radius: 5px;
 }
 
 /*Tamaño de contenedor general, cambiar individualmete si lo necesito*/
