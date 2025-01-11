@@ -1,0 +1,816 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,100&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+/* Nuevas FUENTES */
+
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --header-font: "Yusei Magic", serif;;
+    --font-general: "Jost", serif;;
+    --font-text: "Quicksand", serif;
+    --principal: #e48aa5;
+    --menu: #fac6d7;
+    --menu2: #fac6d7;
+    --botones: #d3d88e;
+    --letra: #6d3630;
+    --letra2: #fff;
+    --letra2: #efede3;
+    --violeta: #642bff;
+    --black: #292427;
+    --white: #fff;
+
+    --naranja: #f8ad40;
+    --verde: #d3d88e;
+}
+
+/*Auto scrol*/
+
+html{
+    scroll-behavior: smooth;
+}
+
+section[id]{
+    scroll-margin-top: 70px;
+}
+
+body{
+    background-color: var(--principal);
+    color: var(--white);
+}
+
+img{
+    max-width: 100%;
+}
+
+/*Tamaño de contenedor general, cambiar individualmete si lo necesito*/
+
+.container{
+    max-width: 1100px;
+    /*0 arriba y abajo - Izq y der automatico al centro*/
+    margin: 0 auto;
+}
+
+/*Menu-Barra*/
+.menu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100000;
+    background-color: var(--menu2);
+}
+
+.menu .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a{
+    font-size: 15px;
+    padding: 20px;
+    color: var(--letra);
+    display: block;
+}
+
+.menu .navbar ul li a:hover{
+    color: violet;
+}
+
+/*Todo esto es para cuando se despliegue la version de celular*/
+#menu{
+    /*Para q no aparezca el INPUT*/
+    display: none;
+}
+
+.menu-icon{
+    width: 25px;
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+.logo .logo-img{
+    width: 100px;
+}
+
+.menu-horizonal li:hover .menu-vertical{
+    display: block;
+} 
+
+/* TITULO */
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+
+    padding: 150px 0 80px 0;
+}
+
+.main-img{
+    display: flex;
+    justify-content: center;
+}
+
+.main-img img {
+    width: 550px;
+    height: 700px;
+    object-fit: cover;
+    border-radius: 150px 0 150px 0;
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.404);
+}
+
+.main-tittle{
+    display: flex;
+    flex-direction: column;
+    padding: 0 60px;
+}
+
+.main-tittle h1{
+    font-size: 4rem;
+    font-family: var(--font-general);
+}
+
+.main-tittle .text-principal{
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: var(--white);
+    max-width: 85%;
+}
+
+.main-tittle .text-principal2{
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color: var(--white);
+    max-width: 70%;
+}
+
+.main-tittle .text-3{
+    color: var(--principal);
+}
+
+/* PLANES */
+
+.planes-content h2{
+    font-size: 3.5rem;
+    font-family: var(--font-general);
+    padding: 25px 0;
+    color: var(--principal);
+}
+
+.planes-content{
+    color: var(--menu);
+    background-color: var(--menu2);
+    margin: 70px auto;
+    text-align: center;
+}
+
+.planes-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px 0 150px 0;
+}
+
+.planes-container .box-1{
+    position: relative;
+    width: 350px;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: white;
+    color: var(--principal);
+}
+
+.planes-container .box-1 .box-icon{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    color: var(--white);
+    background-color: var(--violeta);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    font-size: 40px;
+    font-weight: 700;
+    transition: .5s;
+}
+
+.planes-container .box-1:nth-child(1) .box-icon{
+    box-shadow: 0 0 0 0 var(--verde);
+    background: var(--verde);
+}
+
+.planes-container .box-1:nth-child(1):hover .box-icon{
+    box-shadow: 0 0 0 400px var(--verde);
+}
+
+.planes-container .box-1:nth-child(2) .box-icon{
+    box-shadow: 0 0 0 0 var(--verde);
+    background: var(--verde);
+}
+
+.planes-container .box-1:nth-child(2):hover .box-icon{
+    box-shadow: 0 0 0 400px var(--verde);
+}
+
+.planes-container .box-1:nth-child(3) .box-icon{
+    box-shadow: 0 0 0 0 var(--verde);
+    background: var(--verde);
+}
+
+.planes-container .box-1:nth-child(3):hover .box-icon{
+    box-shadow: 0 0 0 400px var(--verde);
+}
+
+.planes-container .box-1 .content{
+    position: relative;
+    z-index: 1;
+    transition: .5s;
+}
+
+.planes-container .box-1:hover .content{
+    color: var(--letra);
+}
+
+.planes-container .box-1 .content:hover .text-2{
+    color: var(--letra);
+}
+
+.box-1 h3{
+    font-family: var(--font-general);
+    font-size: 2rem;
+}
+
+.box-1 h4{
+    font-family: var(--font-general);
+    font-size: 1.5rem;
+}
+
+.content .text-1{
+    font-size: 1rem;
+}
+
+.content .text-2{
+    font-size: 1rem;
+    color: rgb(100, 100, 100);
+}
+
+.planes-container .box-1:before{
+    content: '';
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, .2);
+    z-index: 2;
+}
+
+/* PROMOS */
+/* Carteles */
+.carteles{
+    position: relative;
+}
+
+.box-cartel{
+    background-color: red;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: block;
+    position: fixed;
+}
+
+.cartel-1{
+    position: absolute;
+    left: 620px;
+    bottom: -30px;
+    transform: rotate(25deg);
+}
+
+.cartel-2{
+    position: absolute;
+    left: 1080px;
+    bottom: -30px;
+    transform: rotate(25deg);
+}
+
+.cartel-3{
+    position: absolute;
+    left: 1520px;
+    bottom: -30px;
+    transform: rotate(25deg);
+}
+
+.container-2{
+    max-width: 1300px;
+    /*0 arriba y abajo - Izq y der automatico al centro*/
+    margin: 0 auto;
+}
+
+.promos-content{
+    padding: 100px 0;
+}
+
+.card-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+/* TACHADO */
+.card-1 .promos-info .tachado{
+    text-decoration:line-through;
+}
+
+.card-1{
+    background-color: var(--menu2);
+    color: var(--letra);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    transition: .3s;
+}
+
+.content h2{
+    font-family: var(--font-general);
+    font-size: 3rem;
+    padding-bottom: 15px;
+}
+
+.card-1 .precio h4{
+    font-family: var(--font-general);
+    font-size: 3rem;
+    color: var(--letra);
+    margin-bottom: 15px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.card-1 .precio h4::before{
+    content: '$';
+}
+
+.bottom a{
+    background-color: var(--principal);
+    color: white;
+    padding: 10px;
+    transition: .5s;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.bottom a:hover{
+    background-color: var(--naranja);
+    color: var(--white);
+}
+
+.promos-info{
+    padding-top: 25px;
+    font-size: 1rem;
+}
+
+.promos-info p::before{
+    content: '*';
+}
+
+.card-1:hover{
+    background-color: var(--white);
+    color: var(--principal);
+}
+
+.box-2{
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 0;
+    background-image: url(img/lugares2.png);
+    margin: 25px 0;
+    padding-bottom: 50px;
+    color: white;
+}
+
+.box-2 h4{
+    font-family: var(--font-general);
+    font-size: 3rem;
+    padding: 25px 0;
+}
+
+.box-2 p{
+    font-size: 1.5rem;
+}
+
+/* TRABAJO */
+
+.trabajo-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.trabajo-content h2{
+    font-family: var(--font-general);
+    font-size: 3rem;
+    padding-bottom: 15px;
+}
+
+.trabajo-content p{
+    font-size: 1rem;
+    padding-bottom: 15px;
+    padding-right: 75px;
+}
+
+.trabajo-content p::before{
+    content: '*';
+}
+
+.trabajo-content .img-trabajo img{
+    position: relative;
+    top: 25px;
+}
+
+/* FINAL */
+.lugares-content{
+    background-image: url(img/lugares2.png);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    min-height: 60vh;
+    text-align: center;
+    position: relative;
+}
+
+.lug-text{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.lug-text h2{
+    font-size: 2.5rem;
+    font-family: var(--font-general);
+    padding-bottom: 25px;
+}
+
+.lug-text a{
+    background-color: var(--botones);
+    font-size: 1.5rem;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 15px;
+    transition: .3s;
+}
+
+
+.lug-text a:hover{
+    background-color: white;
+    color: var(--principal);
+}
+
+.lugares-content span{
+    font-family: var(--font-general);
+    font-size: 3rem;
+    background: rgb(100,43,255);
+    background: linear-gradient(243deg, rgba(100,43,255,1) 0%, rgba(233,30,99,1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    padding: 7px;
+}
+
+.lugares-content p{
+    padding: 20px 100px 0 100px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.consultas-content{
+    position: relative;
+}
+
+.consultas-content h2{
+    padding: 0 110px 0 110px;
+    font-size: 2rem;
+}
+
+.consultas-content p{
+    padding: 0 110px 0 110px;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.consultas-content .p-2{
+    padding-bottom: 8px;
+}
+
+.consultas-content a{
+    background-color: var(--rosa);
+    border-radius: 15px;
+    padding: 10px;
+    color: white;
+    width: 200px;
+    position: absolute;
+    right: 150px;
+    transition: .3s;
+}
+
+.consultas-content a:hover{
+    background-color: var(--violeta);
+}
+
+/**DIV FOOTER - Info y redes sociales*/
+
+.footer-info1{
+    color: var(--black);
+}
+
+.footer-info1 .footer-contact a{
+    color: var(--black);
+}
+
+
+.footer-info{
+    padding: 50px;
+    text-align: center;
+    background-color: var(--menu2);
+}
+
+.footer-info1{
+    display: flex;
+    text-align: left;
+    gap: 250px;
+    justify-content: center;
+}
+
+.footer-text p{
+    font-size: 1.1rem;
+}
+
+/*Redes sociales*/
+
+.footer-redes1{
+    padding: 20px 0 0 0;
+    display: flex;
+    justify-content: space-around;
+    gap: 25px;
+}
+
+.footer-redes1 a{
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background-color: var(--botones);
+    color: var(--black);
+    border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+    transition: all .4s ease-in-out;
+}
+
+.footer-redes1 a:hover{
+    transform: scale(1.2);
+    background-color: var(--principal);
+    color: var(--black);
+}
+
+/*BOTON TOP*/
+
+.botton-top-container{
+    position: fixed;
+    bottom: 0.1rem;
+    right: 4rem;
+    width: 6.6rem;
+    height: 6.6rem;
+    z-index: -1;
+}
+
+.botton-top{
+    width: 0rem;
+    height: 0rem;
+    background-color: var(--letra);
+    border-radius: 50%;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.botton-top i{
+    position: absolute;
+    font-size: 1.7rem;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: white;
+    transition: .2s;
+}
+
+.show{
+    z-index: 10;
+}
+
+.show .botton-top{
+    animation: pop .3s ease-in-out;
+    height: 4.6rem;
+    width: 4.6rem;
+    z-index: 11;
+}
+
+.show i{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+@keyframes pop{
+    0%{
+        width: 0;
+        height: 0;
+    }
+    50%{
+        width: 8rem;
+        height: 8rem;
+    }
+    100%{
+        height: 4.6rem;
+        width: 4.6rem;
+    }
+}
+
+/**FOOTER**/
+footer{
+    text-align: center;
+    background-color: var(--principal);
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+    gap: 50px;
+}
+
+footer a{
+    font-family: var(--menu);
+    text-decoration: none;
+    color: var(--black);
+}
+
+footer i{
+    margin: 0 auto;
+}
+
+footer p{
+    color: var(--black);
+    font-size: 1rem;
+}
+
+@media (max-width: 900px){
+    .menu{
+        padding: 15px;
+    }
+
+    .menu label{
+        display: initial;
+    }
+
+    .menu .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        background-color: var(--menu);
+    }
+
+    .menu .navbar ul li{
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .menu-vertical{
+        z-index: 100;
+        background-color: var(--menu);
+    }
+
+    .menu .logo{
+        padding: 0 25px 0 25px;
+    }
+
+    .main{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container{
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .main-img{
+        display: none;
+    }
+
+    .planes-container{
+       display: flex;
+       flex-direction: column;
+       gap: 50px;
+       justify-content: center;
+       align-items: center;
+    }
+
+    .card-content{
+        display: flex;
+        flex-direction: column;
+        margin: 0 40px;
+    }
+
+    .box-2 h4{
+        font-size: 2.5rem;
+    }
+
+    .box-2 p{
+        font-size: 1.2rem;
+    }
+
+    .trabajo-content{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .text-trabajo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 50px;
+    }
+
+    .text-trabajo p{
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .trabajo-content .img-trabajo img{
+        position: relative;
+        top: 0px;
+    }
+    
+
+    .footer-info1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-text-1{
+        padding: 0 50px;
+    }
+
+}
